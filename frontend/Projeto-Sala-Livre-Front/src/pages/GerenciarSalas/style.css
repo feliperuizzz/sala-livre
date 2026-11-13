@@ -1,0 +1,434 @@
+.admin-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+}
+
+.admin-cabecalho h1 {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.admin-cabecalho p {
+  margin: 7px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+
+.admin-botao-principal,
+.admin-adicionar-sala {
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-botao-principal {
+  min-height: 42px;
+
+  padding: 0 16px;
+
+  border-radius: 9px;
+
+  background: #fbbf24;
+  color: #2d342f;
+
+  font-size: 12px;
+}
+
+.admin-botao-principal:hover {
+  background: #f2b718;
+  transform: translateY(-1px);
+}
+
+.admin-bloco {
+  margin-bottom: 22px;
+
+  padding: 22px;
+
+  border: 1px solid #e6e7e3;
+  border-radius: 15px;
+
+  background: #ffffff;
+}
+
+.admin-bloco-topo {
+  margin-bottom: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.admin-bloco-topo h2 {
+  margin: 0;
+
+  color: #252b28;
+
+  font-size: 16px;
+}
+
+.admin-bloco-topo span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #929793;
+
+  font-size: 10px;
+}
+
+.admin-bloco-acoes {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.admin-bloco-acoes button,
+.admin-sala-acoes button {
+  min-height: 32px;
+
+  padding: 0 11px;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-acao-editar {
+  border: 1px solid #e1e3df;
+
+  background: #ffffff;
+  color: #59615d;
+}
+
+.admin-acao-editar:hover {
+  border-color: #d6d8d4;
+
+  background: #f2f3f0;
+}
+
+.admin-acao-excluir {
+  border: 1px solid #f2cbc3;
+
+  background: #fff4f1;
+  color: #c85e49;
+}
+
+.admin-acao-excluir:hover {
+  background: #fce8e3;
+
+  transform: translateY(-1px);
+}
+
+.admin-adicionar-sala {
+  min-height: 34px;
+
+  padding: 0 12px;
+
+  border-radius: 8px;
+
+  background: #f2b718;
+  color: #2d342f;
+
+  font-size: 10px;
+}
+
+.admin-adicionar-sala:hover {
+  background: #daa516;
+}
+
+.admin-salas-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(180px, 1fr)
+    );
+
+  gap: 10px;
+}
+
+.admin-sala-card {
+  min-height: 82px;
+
+  padding: 12px;
+
+  border: 1px solid #e7e8e4;
+  border-radius: 10px;
+
+  background: #fafbf8;
+
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  column-gap: 9px;
+  row-gap: 11px;
+
+  color: #53605a;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.admin-sala-card:hover {
+  border-color: #dfe1dc;
+
+  background: #ffffff;
+}
+
+.admin-sala-card > svg {
+  color: #8a918d;
+}
+
+.admin-sala-card strong {
+  color: #363e3a;
+
+  font-size: 12px;
+}
+
+.admin-sala-acoes {
+  grid-column: 1 / -1;
+
+  padding-top: 9px;
+
+  border-top: 1px solid #eceeeb;
+
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 6px;
+}
+
+.admin-sem-salas {
+  padding: 25px;
+
+  border: 1px dashed #dfe1dd;
+  border-radius: 10px;
+
+  color: #969b97;
+
+  font-size: 11px;
+  text-align: center;
+}
+
+.admin-estado {
+  margin-bottom: 15px;
+
+  padding: 15px;
+
+  border-radius: 9px;
+
+  background: #f5f6f3;
+
+  color: #888e89;
+
+  font-size: 11px;
+  text-align: center;
+}
+
+.admin-estado.erro {
+  border: 1px solid #f4d1ca;
+
+  background: #fff3f0;
+
+  color: #d05e4a;
+}
+
+.admin-formulario h2 {
+  margin: 0;
+
+  color: #1e2423;
+
+  font-size: 20px;
+}
+
+.admin-formulario > p {
+  margin: 7px 0 23px;
+
+  color: #858a86;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.admin-formulario label {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  color: #414844;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-formulario input {
+  width: 100%;
+  height: 43px;
+
+  padding: 0 12px;
+
+  border: 1px solid #dedfdb;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #fafbf8;
+  color: #252b28;
+
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-formulario input:focus {
+  border-color: #e0aa16;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(251, 191, 36, 0.12);
+}
+
+.admin-form-erro {
+  margin-top: 12px;
+
+  padding: 10px 12px;
+
+  border-radius: 7px;
+
+  background: #fce8e3;
+  color: #c85e49;
+
+  font-size: 10px;
+}
+
+.admin-form-acoes {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.3fr;
+
+  gap: 10px;
+}
+
+.admin-form-acoes button {
+  height: 43px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-form-acoes .secundario {
+  border: 1px solid #e2e3df;
+
+  background: #f4f5f2;
+  color: #686e6a;
+}
+
+.admin-form-acoes .secundario:hover {
+  background: #eceeea;
+}
+
+.admin-form-acoes .principal {
+  background: #fbbf24;
+  color: #30362f;
+}
+
+.admin-form-acoes .principal:hover {
+  background: #f2b718;
+
+  transform: translateY(-1px);
+}
+
+@media (max-width: 750px) {
+  .admin-cabecalho,
+  .admin-bloco-topo {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-botao-principal {
+    width: 100%;
+  }
+
+  .admin-bloco-acoes {
+    flex-wrap: wrap;
+  }
+
+  .admin-adicionar-sala {
+    flex: 1;
+  }
+
+  .admin-salas-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .admin-bloco-acoes {
+    flex-direction: column;
+  }
+
+  .admin-bloco-acoes button {
+    width: 100%;
+  }
+
+  .admin-salas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-form-acoes {
+    grid-template-columns: 1fr;
+  }
+}

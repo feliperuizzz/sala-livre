@@ -1,0 +1,132 @@
+.conteudo {
+  text-align: center;
+
+  padding:
+    10px
+    4px
+    2px;
+}
+
+
+.icone {
+  width: 52px;
+  height: 52px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.iconePerigo {
+  background: #fce8e3;
+  color: #d45d48;
+}
+
+.iconeSucesso {
+  background: #e7f4ee;
+  color: #558a79;
+}
+
+
+.titulo {
+  margin: 0;
+
+  color: #1e2423;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.mensagem {
+  max-width: 330px;
+
+  margin:
+    12px auto
+    24px;
+
+  color: #747a77;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+.acoes {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.2fr;
+
+  gap: 11px;
+}
+
+
+.voltar,
+.confirmar {
+  height: 44px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.voltar {
+  background: #f4f5f2;
+  color: #626865;
+
+  border:
+    1px solid
+    #e3e5e2;
+}
+
+
+.voltar:hover {
+  background: #eceeea;
+}
+
+
+.confirmar {
+  color: #ffffff;
+}
+
+.confirmarPerigo {
+  background: #eb725d;
+}
+
+.confirmarPerigo:hover {
+  background: #dc624e;
+  transform: translateY(-1px);
+}
+
+.confirmarSucesso {
+  background: #68a995;
+}
+
+.confirmarSucesso:hover {
+  background: #579681;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 500px) {
+
+  .acoes {
+    grid-template-columns: 1fr;
+  }
+
+}

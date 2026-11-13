@@ -1,0 +1,135 @@
+.conteudo {
+  text-align: center;
+
+  padding: 12px 6px 2px;
+}
+
+.iconeOcupada {
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eb725d;
+  color: #ffffff;
+}
+
+.titulo {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #d85844;
+}
+
+.descricao {
+  margin: 12px auto 20px;
+
+  color: #777d7a;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.informacoes {
+  margin-bottom: 22px;
+
+  padding: 16px 18px;
+
+  text-align: left;
+
+  border-radius: 10px;
+
+  background: #fffafa;
+  border: 1px solid #f2dfda;
+}
+
+.informacoes div {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 6px 0;
+
+  font-size: 13px;
+}
+
+.informacoes span {
+  color: #777d7a;
+}
+
+.informacoes strong {
+  color: #303634;
+  font-weight: 600;
+
+  text-align: right;
+}
+
+.erro {
+  margin-bottom: 16px;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background: #fce8e3;
+
+  color: #a44535;
+
+  font-size: 12px;
+}
+
+.acoes {
+  display: flex;
+
+  gap: 10px;
+}
+
+.fechar,
+.cancelarReserva {
+  flex: 1;
+
+  min-height: 44px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.fechar {
+  background: #fce8e3;
+  color: #c75947;
+}
+
+.fechar:hover {
+  background: #f8dcd5;
+}
+
+.cancelarReserva {
+  background: #eb725d;
+  color: #ffffff;
+}
+
+.cancelarReserva:hover {
+  background: #dc624e;
+}
+
+.fechar:disabled,
+.cancelarReserva:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

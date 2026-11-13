@@ -1,0 +1,306 @@
+.container {
+  position: relative;
+}
+
+
+/* CAMPO */
+
+.campo {
+  min-width: 170px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 13px;
+
+  border: 1px solid #e5e7e4;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #1e2423;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.campo svg {
+  color: #777d7a;
+}
+
+
+.campo:hover {
+  border-color: #d5d8d4;
+
+  background: #fdfdfb;
+}
+
+
+.campo:focus {
+  outline: none;
+
+  border-color: #fbbf24;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(251, 191, 36, 0.12);
+}
+
+
+/* CALENDÁRIO */
+
+:global(.react-datepicker) {
+  overflow: hidden;
+
+  border: 1px solid #e5e7e4 !important;
+  border-radius: 14px !important;
+
+  background: #ffffff !important;
+
+  font-family:
+    "Inter",
+    sans-serif !important;
+
+  box-shadow:
+    0 16px 45px
+    rgba(30, 36, 35, 0.13);
+}
+
+
+/* CABEÇALHO */
+
+:global(.react-datepicker__header) {
+  padding:
+    17px
+    14px
+    10px !important;
+
+  border-bottom:
+    1px solid
+    #eeeeeb !important;
+
+  background:
+    #fafaf7 !important;
+}
+
+
+:global(.react-datepicker__current-month) {
+  margin-bottom: 13px;
+
+  color: #1e2423 !important;
+
+  font-size: 13px !important;
+  font-weight: 700 !important;
+
+  text-transform: capitalize;
+}
+
+
+/* SETAS */
+
+:global(.react-datepicker__navigation) {
+  top: 13px !important;
+
+  width: 32px !important;
+  height: 32px !important;
+
+  border-radius: 8px;
+
+  transition:
+    background 0.2s ease;
+}
+
+
+:global(.react-datepicker__navigation:hover) {
+  background: #f2f3ef;
+}
+
+
+:global(
+  .react-datepicker__navigation-icon::before
+) {
+  border-color:
+    #6e7472 !important;
+
+  border-width:
+    2px 2px 0 0 !important;
+
+  width: 7px !important;
+  height: 7px !important;
+}
+
+
+/* DIAS DA SEMANA */
+
+:global(.react-datepicker__day-names) {
+  margin-top: 4px;
+}
+
+
+:global(.react-datepicker__day-name) {
+  width: 34px !important;
+  line-height: 30px !important;
+
+  margin: 2px !important;
+
+  color: #9a9f9d !important;
+
+  font-size: 10px !important;
+  font-weight: 600 !important;
+
+  text-transform: uppercase;
+}
+
+
+/* ÁREA DOS DIAS */
+
+:global(.react-datepicker__month) {
+  margin:
+    10px
+    12px
+    13px !important;
+}
+
+
+:global(.react-datepicker__week) {
+  display: flex;
+}
+
+
+/* DIA */
+
+:global(.react-datepicker__day) {
+  width: 34px !important;
+  height: 34px !important;
+
+  line-height: 34px !important;
+
+  margin: 2px !important;
+
+  border-radius: 8px !important;
+
+  color: #444a47 !important;
+
+  font-size: 11px !important;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+
+/* HOVER */
+
+:global(
+  .react-datepicker__day:hover
+) {
+  background:
+    #fff4cf !important;
+
+  color:
+    #6a5006 !important;
+}
+
+
+:global(
+  .react-datepicker__day--selected
+) {
+  background:
+    #fbbf24 !important;
+
+  color:
+    #302a18 !important;
+
+  font-weight:
+    700 !important;
+}
+
+
+:global(
+  .react-datepicker__day--selected:hover
+) {
+  background:
+    #f5ae16 !important;
+}
+
+
+:global(
+  .react-datepicker__day--today
+) {
+  position: relative;
+
+  font-weight:
+    700 !important;
+}
+
+
+:global(
+  .react-datepicker__day--today:not(
+    .react-datepicker__day--selected
+  )
+) {
+  color:
+    #ad7d00 !important;
+
+  background:
+    #fff9e8 !important;
+}
+
+
+
+:global(
+  .react-datepicker__day--outside-month
+) {
+  color:
+    #c3c7c4 !important;
+}
+
+
+:global(
+  .react-datepicker__day--disabled
+) {
+  color:
+    #d0d3d1 !important;
+
+  cursor:
+    not-allowed !important;
+}
+
+
+:global(
+  .react-datepicker__day--disabled:hover
+) {
+  background:
+    transparent !important;
+}
+
+
+:global(
+  .react-datepicker-popper
+) {
+  z-index: 100 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .campo {
+    width: 100%;
+    min-width: 0;
+  }
+
+}

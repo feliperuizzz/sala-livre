@@ -1,0 +1,122 @@
+.conteudo {
+  text-align: center;
+
+  padding:
+    12px
+    6px
+    2px;
+}
+
+
+.icone {
+  width: 54px;
+  height: 54px;
+
+  margin:
+    0 auto
+    17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #68a995;
+  color: #ffffff;
+
+  box-shadow:
+    0 7px 18px
+    rgba(104, 169, 149, 0.2);
+}
+
+
+.conteudo h2 {
+  margin: 0;
+
+  color: #245f50;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.descricao {
+  max-width: 310px;
+
+  margin:
+    12px auto
+    21px;
+
+  color: #747a77;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+.descricao strong {
+  color: #424846;
+
+  font-weight: 600;
+}
+
+
+.resumo {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  margin-bottom: 23px;
+
+  padding: 15px;
+
+  border:
+    1px solid
+    #d9e9e2;
+
+  border-radius: 10px;
+
+  background: #f2f8f5;
+}
+
+
+.resumo strong {
+  color: #245f50;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.resumo span {
+  color: #7a817e;
+
+  font-size: 12px;
+}
+
+
+.botao {
+  width: 100%;
+  height: 44px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #e7f4ee;
+
+  color: #245f50;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.botao:hover {
+  background: #dceee6;
+}

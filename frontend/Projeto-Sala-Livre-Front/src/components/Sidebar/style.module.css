@@ -1,0 +1,266 @@
+.sidebar {
+  width: 235px;
+  min-width: 235px;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  padding: 28px 20px 22px;
+
+  background: #ffffff;
+
+  border-right: 1px solid #e7e8e4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  position: sticky;
+  top: 0;
+
+  align-self: flex-start;
+
+  overflow-y: auto;
+}
+
+
+.marca {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 35px;
+}
+
+
+.marcaIcone {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #fbbf24;
+
+  color: #263a34;
+}
+
+
+.marca strong {
+  display: block;
+
+  font-size: 15px;
+}
+
+
+.marca span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #929793;
+
+  font-size: 10px;
+}
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.menuItem {
+  width: 100%;
+  height: 43px;
+
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #717773;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-align: left;
+}
+
+
+.menuItem:hover {
+  background: #f7f6ef;
+}
+
+
+.menuItem.ativo {
+  background: #fff6d7;
+
+  color: #77601f;
+
+  font-weight: 600;
+}
+
+
+.usuarioArea {
+  padding-top: 18px;
+
+  border-top: 1px solid #ededeb;
+}
+
+
+.usuarioInfo {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+}
+
+
+.usuarioAvatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #fff3c9;
+
+  color: #8b6b0b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.usuarioInfo strong {
+  display: block;
+
+  font-size: 11px;
+}
+
+
+.usuarioInfo span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #929793;
+
+  font-size: 9px;
+}
+
+
+.botaoSidebar {
+  width: 100%;
+  height: 39px;
+
+  border: 1px solid #e3e5e2;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #6f756f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+.botaoSidebar:hover {
+  background: #f7f7f4;
+}
+
+
+.entrar {
+  background: #fbbf24;
+
+  border-color: #fbbf24;
+
+  color: #33382f;
+
+  font-weight: 600;
+}
+
+
+@media (max-width: 950px) {
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+
+    height: auto;
+    min-height: auto;
+
+    padding: 18px;
+
+    gap: 20px;
+
+    position: static;
+
+    align-self: stretch;
+
+    overflow: visible;
+  }
+
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+  .menuItem {
+    width: auto;
+  }
+
+
+  .usuarioArea {
+    padding-top: 15px;
+  }
+
+}
+
+.usuarioInfo > div:last-child {
+  min-width: 0;
+}
+
+
+.usuarioInfo strong {
+  display: block;
+
+  max-width: 135px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  font-size: 11px;
+}

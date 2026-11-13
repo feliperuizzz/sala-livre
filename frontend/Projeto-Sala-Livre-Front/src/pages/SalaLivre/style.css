@@ -1,0 +1,422 @@
+:root {
+  --background: #f6f6f2;
+  --surface: #ffffff;
+
+  --text-primary: #1e2423;
+  --text-secondary: #6e7472;
+  --text-muted: #9a9f9d;
+
+  --primary: #fbbf24;
+  --primary-hover: #f5ae16;
+  --primary-light: #fff4cf;
+
+  --green: #(Cliente);
+  --green-light: #e7f4ee;
+  --green-border: #bfdccc;
+  --green-text: #245f50;
+
+  --red: #eb725d;
+  --red-light: #fce8e3;
+  --red-border: #f2a695;
+  --red-text: #a44535;
+
+  --border: #e5e7e4;
+
+  --sidebar-width: 235px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+button {
+  border: 0;
+}
+
+
+.sala-livre-layout {
+  min-height: 100vh;
+  display: flex;
+}
+
+.conteudo {
+  width: calc(100% - var(--sidebar-width));
+
+  margin-left: var(--sidebar-width);
+
+  padding: 34px 38px 50px;
+}
+
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+}
+
+
+.cabecalho h1 {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+.cabecalho p {
+  margin: 7px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+
+.filtros {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.campo-data {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 12px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+
+
+.campo-data svg {
+  color: var(--text-secondary);
+}
+
+
+.campo-data input {
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  color: var(--text-primary);
+
+  font-size: 13px;
+}
+
+
+.periodos {
+  display: flex;
+
+  padding: 4px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+
+
+.periodo {
+  padding: 8px 14px;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.periodo:hover {
+  background: #f6f6f2;
+}
+
+
+.periodo.ativo {
+  background: var(--primary);
+  color: #342c14;
+}
+
+.painel-salas {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  padding: 26px 28px;
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+
+.painel-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 10px;
+}
+
+
+.painel-topo h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.painel-topo > div > span {
+  display: block;
+
+  color: var(--text-muted);
+
+  font-size: 11px;
+
+  margin-top: 4px;
+}
+
+
+.legenda {
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+}
+
+
+.legenda span {
+  display: flex !important;
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0 !important;
+
+  font-size: 11px !important;
+
+  color: var(--text-secondary) !important;
+}
+
+
+.legenda-cor {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 3px;
+}
+
+
+.legenda-cor.livre {
+  background: var(--green);
+}
+
+
+.legenda-cor.ocupada {
+  background: var(--red);
+}
+
+
+.bloco {
+  padding: 26px 0;
+
+  border-bottom: 1px solid #eeeeeb;
+}
+
+
+.bloco:last-child {
+  border-bottom: 0;
+  padding-bottom: 4px;
+}
+
+
+.bloco-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+
+.bloco-titulo h3 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.bloco-titulo span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+
+.salas-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(85px, 1fr));
+
+  gap: 12px;
+}
+
+
+.sala-card {
+  min-height: 62px;
+
+  border-radius: 10px;
+
+  border: 1px solid transparent;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.sala-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 13px rgba(0, 0, 0, 0.06);
+}
+
+
+.sala-card strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.sala-card span {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+
+.sala-card.livre {
+  background: var(--green-light);
+
+  border-color: var(--green-border);
+
+  color: var(--green-text);
+}
+
+
+.sala-card.ocupada {
+  background: var(--red-light);
+
+  border-color: var(--red-border);
+
+  color: var(--red-text);
+}
+
+
+.estado-mensagem {
+  padding: 50px 20px;
+
+  text-align: center;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+
+.estado-mensagem.erro {
+  color: var(--red-text);
+}
+
+
+.pagina-carregando {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Inter", sans-serif;
+
+  background: var(--background);
+
+  color: var(--text-secondary);
+}
+
+
+@media (max-width: 950px) {
+
+  .cabecalho {
+    flex-direction: column;
+  }
+
+
+  .filtros {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .salas-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}

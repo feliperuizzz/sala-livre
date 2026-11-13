@@ -1,0 +1,108 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(20, 25, 24, 0.48);
+  backdrop-filter: blur(3px);
+
+  animation: fadeIn 0.18s ease;
+}
+
+
+.modalContainer {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8eae7;
+  border-radius: 16px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.18);
+
+  animation: modalEntrada 0.18s ease;
+}
+
+
+.modalFechar {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #777d7a;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.modalFechar:hover {
+  background: #f3f4f1;
+  color: #1e2423;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes modalEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@media (max-width: 520px) {
+
+  .modalOverlay {
+    padding: 16px;
+  }
+
+
+  .modalContainer {
+    padding: 26px 20px;
+  }
+
+}
